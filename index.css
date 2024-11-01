@@ -1,3 +1,6 @@
+*{
+    box-sizing: border-box;
+}
 
 body{
     padding: 0;
@@ -21,8 +24,17 @@ main{
     justify-content: center;
 }
 
+.content-area p {
+    font-family: "Playwrite GB S", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
 .content-area h1{
     margin: 0;
+    font-family: "Itim", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .image-area{
@@ -35,4 +47,22 @@ main{
     width: 100%;
     border-radius: .8rem;
     margin-bottom: 1rem;
+}
+
+@media only screen and (max-width: 600px){
+    main{
+        flex-direction: column;
+    }
+    .content-area, .image-area{
+        width: 100%;
+    }
+
+    .image-area{
+        width: 80%;
+        margin-left: auto; /*margin auto çalışabilmesi için display block olmalı */
+        margin-right: auto;
+        display: block;
+        
+    }
+
 }
